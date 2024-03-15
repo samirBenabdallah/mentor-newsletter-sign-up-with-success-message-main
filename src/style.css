@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Roboto-bold";
+  src: url("../assets/fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+:root {
+  --Tomato: rgb(255, 98, 87);
+  --Error-color: rgba(255, 98, 87, 0.253);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "Roboto";
+  text-decoration: none;
+  color: var(--Dark-Slate-Grey);
+}
+p {
+  font-size: 15px;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--Charcoal-Grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main {
+  width: 700px;
+  height: 450px;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: var(--White);
+  display: flex;
+}
+body main aside {
+  width: 50%;
+  height: 100%;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../assets/images/illustration-sign-up-desktop.svg");
+}
+body main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 30px;
+}
+body main section h1 {
+  font-size: 3rem;
+}
+body main section > p {
+  margin-block: 15px;
+}
+body main section .item {
+  display: flex;
+  align-items: center;
+  margin-block: 5px;
+}
+body main section .item img {
+  width: 25px;
+  margin-right: 10px;
+}
+body main section .form {
+  margin-block: 15px;
+  height: 60px;
+}
+.form input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: solid 1px var(--Grey);
+  padding-left: 10px;
+  margin-top: 5px;
+}
+.form input:hover {
+  cursor: pointer;
+  transition: all ease 0.5s;
+  border-color: var(--Dark-Slate-Grey);
+}
+.form label {
+  cursor: pointer;
+  font-family: Roboto-bold;
+}
+body main button {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--Dark-Slate-Grey);
+  cursor: pointer;
+}
+body main button a {
+  color: var(--White);
+}
+body main button:hover {
+  transition: all linear 0.5s;
+  background-color: var(--Tomato);
+  box-shadow: 0px 7px 15px var(--Tomato);
+}
+.error {
+  position: relative;
+}
+.error::after {
+  content: "Valide email required";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--Tomato);
+  font-size: 14px;
+  font-family: Roboto-bold;
+}
+.error input {
+  border-color: var(--Tomato) !important;
+  color: var(--Tomato);
+  background-color: var(--Error-color);
+}
